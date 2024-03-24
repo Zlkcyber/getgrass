@@ -1,0 +1,1 @@
+#find user_id on the site in conlose localStorage.getItem('userId') (if you can't get it, write allow pasting)  ( delete this line while run the tools! )
