@@ -14,7 +14,7 @@ install loguru
 install websockets_proxy
 ```pip install websockets_proxy```
 
-## register: https://app.getgrass.io/register/?referralCode=PnmuSjrqxyxvZsk ( use this link instead! )
+## register: https://app.getgrass.io/register/?referralCode=Hfcd2LgzYoRLmTW ( use this link instead! )
 
 ## how to use
 
