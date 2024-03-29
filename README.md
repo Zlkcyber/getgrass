@@ -13,7 +13,10 @@ install loguru
 
 install websockets_proxy
 ```pip install websockets_proxy```
-
+# clone the repo
+```git clone https://github.com/Zlkcyber/getgrass.git```
+move to repo dir
+``` cd getgrass ```
 ## register: https://app.getgrass.io/register/?referralCode=Hfcd2LgzYoRLmTW ( use this link instead! )
 
 ## how to use
