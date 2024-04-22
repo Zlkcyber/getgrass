@@ -14,7 +14,7 @@ while True:
         f.write(response.content)
 
     # Rename the file
-    os.rename('all.txt', 'proxy_list(for1).txt')
+    os.rename('all.txt', 'proxy.txt')
 
     # Add all files to the Git repository
     repo = Repo(repo_path)
