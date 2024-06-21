@@ -1,5 +1,3 @@
-#script for 1 user_id and a whole bunch of proxies
-
 import asyncio
 import random
 import ssl
@@ -57,7 +55,7 @@ async def connect_to_wss(socks5_proxy, user_id):
                                 "user_agent": custom_headers['User-Agent'],
                                 "timestamp": int(time.time()),
                                 "device_type": "extension",
-                                "version": "3.3.2"
+                                "version": "4.0.2"
                             }
                         }
                         logger.debug(auth_response)
@@ -73,14 +71,22 @@ async def connect_to_wss(socks5_proxy, user_id):
 
 
 async def main():
-    #find user_id on the site in conlose localStorage.getItem('userId') (if you can't get it, write allow pasting)
-    _user_id = input('Enter your user ID: ')
-    #put the proxy in a file in the format socks5://username:password@ip:port or socks5://ip:port
-    with open('proxy_list(for1).txt', 'r') as file:
-        socks5_proxy_list = file.read().splitlines()
+    with open('user_id.txt', 'r') as file:
+        user_ids = file.read().splitlines()
+        
+    # Read proxies from file
+    with open('proxy.txt', 'r') as file:
+        proxies = file.read().splitlines()
     
-    tasks = [asyncio.ensure_future(connect_to_wss(i, _user_id)) for i in socks5_proxy_list]
+    # Create tasks for each proxy and user_id combination
+    tasks = []
+    for proxy in proxies:
+        for user_id in user_ids:
+            tasks.append(asyncio.ensure_future(connect_to_wss(proxy, user_id)))
+    
+    # Execute tasks concurrently
     await asyncio.gather(*tasks)
+
 
 
 if __name__ == '__main__':
