@@ -21,13 +21,14 @@ install websockets_proxy
 
 ``` cd getgrass ```
 
-## register: https://app.getgrass.io/register/?referralCode=Hfcd2LgzYoRLmTW ( use this link instead! )
+## register: 
+- https://app.getgrass.io/register/?referralCode=Hfcd2LgzYoRLmTW ( use this link instead! )
 
 ## how to use
 
 #### getting your user id
 
-login to https://app.getgrass.io
+- login to [https://app.getgrass.io](https://app.getgrass.io/register/?referralCode=Hfcd2LgzYoRLmTW)
 
 then insert this code ```localStorage.getItem('userId')```
 IF YOU GET Don’t paste code into the DevTools Console
@@ -41,16 +42,12 @@ then insert this code again
 ![0001](https://github.com/im-hanzou/getgrass_bot/blob/main/userid.JPG)
 
 #### usage command
-for one account use 1user_id.py 
 
-just do ```python 1user_id.py``` and insert your userid
+- run `nano user_id.txt` enter your userId each line 1 account
+- then run the script ```python main.py``` or ```python3 main.py``` for linux user
 
-if dont work you can using ```python3 1user_id.py```
 
-![0001](https://github.com/im-hanzou/getgrass_bot/blob/main/insert.JPG)
 
-for multiple accounts and for each of them one proxy use foreachuser_id_proxy.py, insert your accounts user ids to user_id.txt and insert your proxies to proxy_list(all).txt
 
-then ```python3 foreachuser_id_proxy.py ```
 
 
