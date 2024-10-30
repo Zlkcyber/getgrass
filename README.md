@@ -5,21 +5,31 @@ install python3
 for windows: https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe 
 
 for linux distros: ```sudo apt-get install python3``` or ```sudo yum install python3``` or ```sudo dnf install python3```
+# clone the repo
+```bash
+git clone https://github.com/Zlkcyber/getgrass.git
+cd getgrass
+```
+
 ## module install 
+```bash
+pip install -r requirements.txt
+```
+**or install one by one**
 install fakeuseragent
-```pip install fake_useragent```
+```
+pip install fake_useragent
+```
 
 install loguru
-```pip install loguru```
+```
+pip install loguru
+```
 
 install websockets_proxy
-```pip install websockets_proxy```
-# clone the repo
-```git clone https://github.com/Zlkcyber/getgrass.git```
-
-## move to repo dir
-
-``` cd getgrass ```
+```
+pip install websockets_proxy
+```
 
 ## register: 
 - https://app.getgrass.io/register/?referralCode=Hfcd2LgzYoRLmTW ( use this link instead! )
@@ -43,8 +53,17 @@ then insert this code again
 
 #### usage command
 
-- run `nano user_id.txt` enter your userId each line 1 account
-- then run the script ```python main.py``` or ```python3 main.py``` for linux user
+- fill your proxy in `proxy.txt `
+- edit your id in `user_id.txt` each line for 1 account
+- then run the script
+```
+python main.py
+```
+or for linux user
+```
+python3 main.py
+```
+ 
 
 
 
