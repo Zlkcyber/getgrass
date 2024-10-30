@@ -1,4 +1,4 @@
-name: UPdate Proxy List
+name: Update Proxy List
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
       - name: Run the getproxy script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python getproxy.py
+        run: python3 getproxy.py
 
       - name: Push changes
         run: |
