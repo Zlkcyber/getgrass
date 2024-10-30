@@ -1,6 +1,7 @@
 name: Update Proxy List
 
 on:
+  push:
   schedule:
     - cron: "0 * * * *"  
 
