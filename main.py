@@ -24,8 +24,8 @@ async def connect_to_wss(socks5_proxy, user_id):
             ssl_context = ssl.create_default_context()
             ssl_context.check_hostname = False
             ssl_context.verify_mode = ssl.CERT_NONE
-            uri = "wss://proxy.wynd.network:4650/"
-            server_hostname = "proxy.wynd.network"
+            uri = "wss://proxy2.wynd.network:4650/"
+            server_hostname = "proxy2.wynd.network"
             proxy = Proxy.from_url(socks5_proxy)
             async with proxy_connect(uri, proxy=proxy, ssl=ssl_context, server_hostname=server_hostname,
                                      extra_headers=custom_headers) as websocket:
@@ -35,7 +35,7 @@ async def connect_to_wss(socks5_proxy, user_id):
                             {"id": str(uuid.uuid4()), "version": "1.0.0", "action": "PING", "data": {}})
                         logger.debug(send_message)
                         await websocket.send(send_message)
-                        await asyncio.sleep(20)
+                        await asyncio.sleep(30)
 
                 # asyncio.create_task(send_http_request_every_10_seconds(socks5_proxy, device_id))
                 await asyncio.sleep(1)
@@ -55,7 +55,7 @@ async def connect_to_wss(socks5_proxy, user_id):
                                 "user_agent": custom_headers['User-Agent'],
                                 "timestamp": int(time.time()),
                                 "device_type": "extension",
-                                "version": "4.0.2"
+                                "version": "4.26.2"
                             }
                         }
                         logger.debug(auth_response)
