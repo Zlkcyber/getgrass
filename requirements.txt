@@ -1,3 +1,4 @@
 loguru
 websockets-proxy
 fake-useragent
+websockets
