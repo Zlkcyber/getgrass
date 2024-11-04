@@ -1,4 +1,4 @@
 loguru
 websockets-proxy
 fake-useragent
-websockets
+websockets==12.0
