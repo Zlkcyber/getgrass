@@ -16,6 +16,10 @@ cd getgrass
 pip install -r requirements.txt
 ```
 **or install one by one**
+install websocket
+```
+pip install websockets==12.0
+```
 install fakeuseragent
 ```
 pip install fake_useragent
