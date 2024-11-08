@@ -70,7 +70,7 @@ async def connect_to_wss(socks5_proxy, user_id):
 
 async def main():
     # Load user IDs from userid.txt
-    with open('userid.txt', 'r') as f:
+    with open('user_id.txt', 'r') as f:
         user_ids = [line.strip() for line in f if line.strip()]
 
     while True:
