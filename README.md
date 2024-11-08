@@ -61,11 +61,11 @@ then insert this code again
 - edit your id in `user_id.txt` each line for 1 account
 - then run the script
 ```
-python main.py
-```
-or for linux user
-```
 python3 main.py
+```
+or run script for auto update proxy list
+```
+python3 grass.py
 ```
  
 
